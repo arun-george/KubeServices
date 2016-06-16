@@ -1,0 +1,1296 @@
+INFO  [2016-05-24 09:41:33,328] org.eclipse.jetty.util.log: Logging initialized @1057ms
+INFO  [2016-05-24 09:41:33,412] io.dropwizard.server.ServerFactory: Starting CmdbApplication
+INFO  [2016-05-24 09:41:33,443] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2016-05-24 09:41:33,459] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2016-05-24 09:41:33,490] org.eclipse.jetty.setuid.SetUIDListener: Opened application@107b12c{HTTP/1.1}{0.0.0.0:8080}
+INFO  [2016-05-24 09:41:33,490] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@1d1f8dd{HTTP/1.1}{0.0.0.0:8081}
+INFO  [2016-05-24 09:41:33,490] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-05-24 09:41:33,927] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /cmdb/hosts (com.ril.cmdb.resource.CmdbResource)
+    POST    /cmdb/log (com.ril.cmdb.resource.CmdbResource)
+
+INFO  [2016-05-24 09:41:33,959] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@1d93a21{/,null,AVAILABLE}
+INFO  [2016-05-24 09:41:33,959] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2016-05-24 09:41:33,959] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2016-05-24 09:41:33,959] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@1fc71ab{/,null,AVAILABLE}
+INFO  [2016-05-24 09:41:34,005] org.eclipse.jetty.server.ServerConnector: Started application@107b12c{HTTP/1.1}{0.0.0.0:8080}
+INFO  [2016-05-24 09:41:34,025] org.eclipse.jetty.server.ServerConnector: Started admin@1d1f8dd{HTTP/1.1}{0.0.0.0:8081}
+INFO  [2016-05-24 09:41:34,025] org.eclipse.jetty.server.Server: Started @1755ms
+success!
+
+
+----------------------------------
+--- !ruby/object:Puppet::Transaction::Report
+metrics:
+  resources: !ruby/object:Puppet::Util::Metric
+    label: Resources
+    name: resources
+    values:
+    - - total
+      - Total
+      - 24
+    - - skipped
+      - Skipped
+      - 0
+    - - failed
+      - Failed
+      - 0
+    - - failed_to_restart
+      - Failed to restart
+      - 0
+    - - restarted
+      - Restarted
+      - 0
+    - - changed
+      - Changed
+      - 14
+    - - out_of_sync
+      - Out of sync
+      - 14
+    - - scheduled
+      - Scheduled
+      - 0
+  time: !ruby/object:Puppet::Util::Metric
+    label: Time
+    name: time
+    values:
+    - - notify
+      - Notify
+      - 0.010378226
+    - - file
+      - File
+      - 0.003006906
+    - - user
+      - User
+      - 0.000767555
+    - - package
+      - Package
+      - 0.000558362
+    - - service
+      - Service
+      - 0.125279889
+    - - schedule
+      - Schedule
+      - 0.000881382
+    - - filebucket
+      - Filebucket
+      - 0.000156421
+    - - config_retrieval
+      - Config retrieval
+      - 0.996513834
+    - - total
+      - Total
+      - 1.1375425750000001
+  changes: !ruby/object:Puppet::Util::Metric
+    label: Changes
+    name: changes
+    values:
+    - - total
+      - Total
+      - 14
+  events: !ruby/object:Puppet::Util::Metric
+    label: Events
+    name: events
+    values:
+    - - total
+      - Total
+      - 14
+    - - failure
+      - Failure
+      - 0
+    - - success
+      - Success
+      - 14
+puppet_version: 4.4.2
+kind: apply
+status: changed
+time: 2016-05-24 15:28:29.282165830 +05:30
+transaction_uuid: 431af75f-5d87-41da-ab62-1a683872d499
+logs:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: Hello.. osnode3.jcp.com
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.050688105+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'Hello.. osnode3.jcp.com'
+  source: /Stage[main]/Prep_mw/Notify[Hello.. osnode3.jcp.com]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw
+  time: '2016-05-24T15:28:32.050882972+05:30'
+  file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+  line: 6
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: Hello.. Entering..!!
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.051562609+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'Hello.. Entering..!!'
+  source: /Stage[main]/Prep_mw/Notify[Hello.. Entering..!!]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw
+  time: '2016-05-24T15:28:32.051663087+05:30'
+  file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+  line: 7
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: 'Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm'
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.052245307+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: 'defined ''message'' as ''Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm'''
+  source: '/Stage[main]/Prep_mw/Notify[Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm]/message'
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw
+  time: '2016-05-24T15:28:32.052332620+05:30'
+  file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+  line: 8
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |
+    ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.054212544+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as 'ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.054425023+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 8
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |2
+     SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.055530770+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as ' SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[ SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.055654873+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 13
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |2
+     SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.056665496+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as ' SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[ SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.056790114+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 15
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |2
+     TAR1 FLAG DETAIl : y
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.057832691+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as ' TAR1 FLAG DETAIl : y
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[ TAR1 FLAG DETAIl : y
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.057952636+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 35
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: ' TAR1  BINARY : tar1-1.0-1.noarch.rpm'
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.058939275+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: 'defined ''message'' as '' TAR1  BINARY : tar1-1.0-1.noarch.rpm'''
+  source: '/Stage[main]/Prep_mw::Tomcat_install/Notify[ TAR1  BINARY : tar1-1.0-1.noarch.rpm]/message'
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.059064046+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 39
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: ensure changed 'stopped' to 'running'
+  source: /Stage[main]/Apps_install::Tar1_install/Service[tar1]/ensure
+  tags:
+  - notice
+  - service
+  - tar1
+  - class
+  - apps_install::tar1_install
+  - apps_install
+  - tar1_install
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.293331080+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/apps_install/manifests/tar1_install.pp
+  line: 22
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |
+    Contents: TAR1:tar1-1.0-1.noarch.rpm
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.297537620+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as 'Contents: TAR1:tar1-1.0-1.noarch.rpm
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[Contents: TAR1:tar1-1.0-1.noarch.rpm
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.297784789+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 47
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |
+    tomcat flag: n
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.298759314+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as 'tomcat flag: n
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[tomcat flag: n
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.299009606+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 48
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |
+    foresight flag: n
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.300250820+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as 'foresight flag: n
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[foresight flag: n
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.300385979+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 49
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |
+    tar1 flag: y
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.301321933+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: |-
+    defined 'message' as 'tar1 flag: y
+    '
+  source: |-
+    /Stage[main]/Prep_mw::Tomcat_install/Notify[tar1 flag: y
+    ]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw::tomcat_install
+  - prep_mw
+  - tomcat_install
+  time: '2016-05-24T15:28:32.301525787+05:30'
+  file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+  line: 50
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: Hello.. Exiting..!!
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.303334612+05:30'
+  file:
+  line:
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: defined 'message' as 'Hello.. Exiting..!!'
+  source: /Stage[main]/Prep_mw/Notify[Hello.. Exiting..!!]/message
+  tags:
+  - notice
+  - notify
+  - class
+  - prep_mw
+  time: '2016-05-24T15:28:32.303456536+05:30'
+  file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+  line: 13
+- !ruby/object:Puppet::Util::Log
+  level: :notice
+  message: Applied catalog in 0.31 seconds
+  source: Puppet
+  tags:
+  - notice
+  time: '2016-05-24T15:28:32.332370286+05:30'
+  file:
+  line:
+catalog_uuid: 9ae97f1c-5d94-404d-bd50-2d8910db0852
+environment: production
+configuration_version: 1464082539
+report_format: 5
+resource_statuses:
+  Notify[Hello.. osnode3.jcp.com]: !ruby/object:Puppet::Resource::Status
+    title: Hello.. osnode3.jcp.com
+    file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+    line: 6
+    resource: Notify[Hello.. osnode3.jcp.com]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw
+    - Notify[Hello.. osnode3.jcp.com]
+    evaluation_time: 0.001185255
+    tags:
+    - notify
+    - class
+    - prep_mw
+    time: '2016-05-24T15:28:32.049814812+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: Hello.. osnode3.jcp.com
+      historical_value:
+      message: defined 'message' as 'Hello.. osnode3.jcp.com'
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.050557586 +05:30
+  Notify[Hello.. Entering..!!]: !ruby/object:Puppet::Resource::Status
+    title: Hello.. Entering..!!
+    file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+    line: 7
+    resource: Notify[Hello.. Entering..!!]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw
+    - Notify[Hello.. Entering..!!]
+    evaluation_time: 0.000467403
+    tags:
+    - notify
+    - class
+    - prep_mw
+    time: '2016-05-24T15:28:32.051280408+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: Hello.. Entering..!!
+      historical_value:
+      message: defined 'message' as 'Hello.. Entering..!!'
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.051498803 +05:30
+  'Notify[Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm]': !ruby/object:Puppet::Resource::Status
+    title: 'Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm'
+    file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+    line: 8
+    resource: 'Notify[Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm]'
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw
+    - 'Notify[Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm]'
+    evaluation_time: 0.000447597
+    tags:
+    - notify
+    - class
+    - prep_mw
+    time: '2016-05-24T15:28:32.051965879+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: 'Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm'
+      historical_value:
+      message: 'defined ''message'' as ''Hello.. MyVAR : TAR1:tar1-1.0-1.noarch.rpm'''
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.052185994 +05:30
+  ? |-
+    Notify[ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |
+      ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 8
+    resource: |-
+      Notify[ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+      ]
+    evaluation_time: 0.001074657
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.053530785+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |
+        ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+      historical_value:
+      message: |-
+        defined 'message' as 'ENTERING : TAR1:tar1-1.0-1.noarch.rpm
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.054083735 +05:30
+  ? |-
+    Notify[ SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |2
+       SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 13
+    resource: |-
+      Notify[ SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[ SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+      ]
+    evaluation_time: 0.000807765
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.055073237+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |2
+         SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+      historical_value:
+      message: |-
+        defined 'message' as ' SDET FOR YOU : TAR1:tar1-1.0-1.noarch.rpm
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.055441607 +05:30
+  ? |-
+    Notify[ SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |2
+       SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 15
+    resource: |-
+      Notify[ SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[ SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+      ]
+    evaluation_time: 0.000822639
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.056226675+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |2
+         SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+      historical_value:
+      message: |-
+        defined 'message' as ' SERVICE_DATA : [TAR1, tar1-1.0-1.noarch.rpm]
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.056577859 +05:30
+  ? |-
+    Notify[ TAR1 FLAG DETAIl : y
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |2
+       TAR1 FLAG DETAIl : y
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 35
+    resource: |-
+      Notify[ TAR1 FLAG DETAIl : y
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[ TAR1 FLAG DETAIl : y
+      ]
+    evaluation_time: 0.000714877
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.057392998+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |2
+         TAR1 FLAG DETAIl : y
+      historical_value:
+      message: |-
+        defined 'message' as ' TAR1 FLAG DETAIl : y
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.057730639 +05:30
+  'Notify[ TAR1  BINARY : tar1-1.0-1.noarch.rpm]': !ruby/object:Puppet::Resource::Status
+    title: ' TAR1  BINARY : tar1-1.0-1.noarch.rpm'
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 39
+    resource: 'Notify[ TAR1  BINARY : tar1-1.0-1.noarch.rpm]'
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - 'Notify[ TAR1  BINARY : tar1-1.0-1.noarch.rpm]'
+    evaluation_time: 0.000735641
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.058487395+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: ' TAR1  BINARY : tar1-1.0-1.noarch.rpm'
+      historical_value:
+      message: 'defined ''message'' as '' TAR1  BINARY : tar1-1.0-1.noarch.rpm'''
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.058848627 +05:30
+  File[/usr/jcp/]: !ruby/object:Puppet::Resource::Status
+    title: /usr/jcp/
+    file: /etc/puppetlabs/code/environments/production/modules/apps_install/manifests/tar1_install.pp
+    line: 4
+    resource: File[/usr/jcp/]
+    resource_type: File
+    containment_path:
+    - Stage[main]
+    - Apps_install::Tar1_install
+    - File[/usr/jcp/]
+    evaluation_time: 0.003006906
+    tags:
+    - file
+    - class
+    - apps_install::tar1_install
+    - apps_install
+    - tar1_install
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.060973229+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  User[userapp]: !ruby/object:Puppet::Resource::Status
+    title: userapp
+    file: /etc/puppetlabs/code/environments/production/modules/apps_install/manifests/tar1_install.pp
+    line: 8
+    resource: User[userapp]
+    resource_type: User
+    containment_path:
+    - Stage[main]
+    - Apps_install::Tar1_install
+    - User[userapp]
+    evaluation_time: 0.000767555
+    tags:
+    - user
+    - userapp
+    - class
+    - apps_install::tar1_install
+    - apps_install
+    - tar1_install
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.064906914+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Package[tar1]: !ruby/object:Puppet::Resource::Status
+    title: tar1
+    file: /etc/puppetlabs/code/environments/production/modules/apps_install/manifests/tar1_install.pp
+    line: 16
+    resource: Package[tar1]
+    resource_type: Package
+    containment_path:
+    - Stage[main]
+    - Apps_install::Tar1_install
+    - Package[tar1]
+    evaluation_time: 0.000558362
+    tags:
+    - package
+    - tar1
+    - class
+    - apps_install::tar1_install
+    - apps_install
+    - tar1_install
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.167125879+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Service[tar1]: !ruby/object:Puppet::Resource::Status
+    title: tar1
+    file: /etc/puppetlabs/code/environments/production/modules/apps_install/manifests/tar1_install.pp
+    line: 22
+    resource: Service[tar1]
+    resource_type: Service
+    containment_path:
+    - Stage[main]
+    - Apps_install::Tar1_install
+    - Service[tar1]
+    evaluation_time: 0.125279889
+    tags:
+    - service
+    - tar1
+    - class
+    - apps_install::tar1_install
+    - apps_install
+    - tar1_install
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.168392961+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: ensure
+      previous_value: stopped
+      desired_value: running
+      historical_value:
+      message: ensure changed 'stopped' to 'running'
+      name: :service_started
+      status: success
+      time: 2016-05-24 15:28:32.179648865 +05:30
+  ? |-
+    Notify[Contents: TAR1:tar1-1.0-1.noarch.rpm
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |
+      Contents: TAR1:tar1-1.0-1.noarch.rpm
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 47
+    resource: |-
+      Notify[Contents: TAR1:tar1-1.0-1.noarch.rpm
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[Contents: TAR1:tar1-1.0-1.noarch.rpm
+      ]
+    evaluation_time: 0.000951555
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.297012212+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |
+        Contents: TAR1:tar1-1.0-1.noarch.rpm
+      historical_value:
+      message: |-
+        defined 'message' as 'Contents: TAR1:tar1-1.0-1.noarch.rpm
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.297418916 +05:30
+  ? |-
+    Notify[tomcat flag: n
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |
+      tomcat flag: n
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 48
+    resource: |-
+      Notify[tomcat flag: n
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[tomcat flag: n
+      ]
+    evaluation_time: 0.000859063
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.298315374+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |
+        tomcat flag: n
+      historical_value:
+      message: |-
+        defined 'message' as 'tomcat flag: n
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.298666650 +05:30
+  ? |-
+    Notify[foresight flag: n
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |
+      foresight flag: n
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 49
+    resource: |-
+      Notify[foresight flag: n
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[foresight flag: n
+      ]
+    evaluation_time: 0.000877615
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.299664562+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |
+        foresight flag: n
+      historical_value:
+      message: |-
+        defined 'message' as 'foresight flag: n
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.300168396 +05:30
+  ? |-
+    Notify[tar1 flag: y
+    ]
+  : !ruby/object:Puppet::Resource::Status
+    title: |
+      tar1 flag: y
+    file: /etc/puppetlabs/code/environments/production/modules/prep_mw/manifests/init.pp
+    line: 50
+    resource: |-
+      Notify[tar1 flag: y
+      ]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw::Tomcat_install
+    - |-
+      Notify[tar1 flag: y
+      ]
+    evaluation_time: 0.000737456
+    tags:
+    - notify
+    - class
+    - prep_mw::tomcat_install
+    - prep_mw
+    - tomcat_install
+    time: '2016-05-24T15:28:32.300931033+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: |
+        tar1 flag: y
+      historical_value:
+      message: |-
+        defined 'message' as 'tar1 flag: y
+        '
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.301239585 +05:30
+  Notify[Hello.. Exiting..!!]: !ruby/object:Puppet::Resource::Status
+    title: Hello.. Exiting..!!
+    file: /etc/puppetlabs/code/environments/production/manifests/site.pp
+    line: 13
+    resource: Notify[Hello.. Exiting..!!]
+    resource_type: Notify
+    containment_path:
+    - Stage[main]
+    - Prep_mw
+    - Notify[Hello.. Exiting..!!]
+    evaluation_time: 0.000696703
+    tags:
+    - notify
+    - class
+    - prep_mw
+    time: '2016-05-24T15:28:32.302870549+05:30'
+    failed: false
+    changed: true
+    out_of_sync: true
+    skipped: false
+    change_count: 1
+    out_of_sync_count: 1
+    events:
+    - !ruby/object:Puppet::Transaction::Event
+      audited: false
+      property: message
+      previous_value: absent
+      desired_value: Hello.. Exiting..!!
+      historical_value:
+      message: defined 'message' as 'Hello.. Exiting..!!'
+      name: :message_changed
+      status: success
+      time: 2016-05-24 15:28:32.303252207 +05:30
+  Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+    title: puppet
+    file:
+    line:
+    resource: Schedule[puppet]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[puppet]
+    evaluation_time: 0.000248926
+    tags:
+    - schedule
+    - puppet
+    time: '2016-05-24T15:28:32.304886218+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+    title: hourly
+    file:
+    line:
+    resource: Schedule[hourly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[hourly]
+    evaluation_time: 0.000235132
+    tags:
+    - schedule
+    - hourly
+    time: '2016-05-24T15:28:32.305320833+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Schedule[daily]: !ruby/object:Puppet::Resource::Status
+    title: daily
+    file:
+    line:
+    resource: Schedule[daily]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[daily]
+    evaluation_time: 7.267e-05
+    tags:
+    - schedule
+    - daily
+    time: '2016-05-24T15:28:32.305720696+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+    title: weekly
+    file:
+    line:
+    resource: Schedule[weekly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[weekly]
+    evaluation_time: 0.000167333
+    tags:
+    - schedule
+    - weekly
+    time: '2016-05-24T15:28:32.305962985+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+    title: monthly
+    file:
+    line:
+    resource: Schedule[monthly]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[monthly]
+    evaluation_time: 7.9582e-05
+    tags:
+    - schedule
+    - monthly
+    time: '2016-05-24T15:28:32.306295884+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Schedule[never]: !ruby/object:Puppet::Resource::Status
+    title: never
+    file:
+    line:
+    resource: Schedule[never]
+    resource_type: Schedule
+    containment_path:
+    - Schedule[never]
+    evaluation_time: 7.7739e-05
+    tags:
+    - schedule
+    - never
+    time: '2016-05-24T15:28:32.306532884+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+  Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+    title: puppet
+    file:
+    line:
+    resource: Filebucket[puppet]
+    resource_type: Filebucket
+    containment_path:
+    - Filebucket[puppet]
+    evaluation_time: 0.000156421
+    tags:
+    - filebucket
+    - puppet
+    time: '2016-05-24T15:28:32.306965002+05:30'
+    failed: false
+    changed: false
+    out_of_sync: false
+    skipped: false
+    change_count: 0
+    out_of_sync_count: 0
+    events: []
+host: osnode3.jcp.com
+cached_catalog_status: not_used
+
+
+
+End-------------------------------
+0:0:0:0:0:0:0:1 - - [24/May/2016:09:41:49 +0000] "POST /cmdb/log HTTP/1.1" 204 - "-" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36" 209
+INFO  [2016-05-24 09:42:16,363] org.eclipse.jetty.server.ServerConnector: Stopped application@107b12c{HTTP/1.1}{0.0.0.0:8080}
+INFO  [2016-05-24 09:42:16,378] org.eclipse.jetty.server.ServerConnector: Stopped admin@1d1f8dd{HTTP/1.1}{0.0.0.0:8081}
+INFO  [2016-05-24 09:42:16,378] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@1fc71ab{/,null,UNAVAILABLE}
+INFO  [2016-05-24 09:42:16,378] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@1d93a21{/,null,UNAVAILABLE}

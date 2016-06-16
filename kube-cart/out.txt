@@ -1,0 +1,29 @@
+INFO  [2016-06-16 09:34:37,760] org.eclipse.jetty.util.log: Logging initialized @1240ms
+INFO  [2016-06-16 09:34:37,973] io.dropwizard.server.ServerFactory: Starting CartApplication
+Catalog
+INFO  [2016-06-16 09:34:37,981] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2016-06-16 09:34:38,011] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2016-06-16 09:34:38,050] org.eclipse.jetty.setuid.SetUIDListener: Opened application@ce5a68e{HTTP/1.1}{0.0.0.0:8180}
+INFO  [2016-06-16 09:34:38,053] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@9d157ff{HTTP/1.1}{0.0.0.0:8280}
+INFO  [2016-06-16 09:34:38,055] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2016-06-16 09:34:39,143] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /cart/ (com.kubedemo.cart.resource.CartResource)
+    GET     /cart/{cartid} (com.kubedemo.cart.resource.CartResource)
+
+WARN  [2016-06-16 09:34:39,148] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: The (sub)resource method addToCart in com.kubedemo.cart.resource.CartResource contains empty path annotation.
+
+INFO  [2016-06-16 09:34:39,149] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@6f89292e{/,null,AVAILABLE}
+INFO  [2016-06-16 09:34:39,157] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2016-06-16 09:34:39,162] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@7c6189d5{/,null,AVAILABLE}
+INFO  [2016-06-16 09:34:39,314] org.eclipse.jetty.server.ServerConnector: Started application@ce5a68e{HTTP/1.1}{0.0.0.0:8180}
+INFO  [2016-06-16 09:34:39,362] org.eclipse.jetty.server.ServerConnector: Started admin@9d157ff{HTTP/1.1}{0.0.0.0:8280}
+INFO  [2016-06-16 09:34:39,362] org.eclipse.jetty.server.Server: Started @2843ms
+INFO  [2016-06-16 09:34:41,750] org.eclipse.jetty.server.ServerConnector: Stopped application@ce5a68e{HTTP/1.1}{0.0.0.0:8180}
+INFO  [2016-06-16 09:34:41,754] org.eclipse.jetty.server.ServerConnector: Stopped admin@9d157ff{HTTP/1.1}{0.0.0.0:8280}
+INFO  [2016-06-16 09:34:41,756] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@7c6189d5{/,null,UNAVAILABLE}
+INFO  [2016-06-16 09:34:41,759] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@6f89292e{/,null,UNAVAILABLE}

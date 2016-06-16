@@ -1,0 +1,11 @@
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: d:/work/kube-cart.log
+      threshold: ALL
+      archive: true
+      archivedLogFilenamePattern: d:/work/kube-cart-%d.log
+      archivedFileCount: 5
+      timeZone: UTC
+      logFormat: # TODO
